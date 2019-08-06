@@ -1,0 +1,40 @@
+body,html,ul,li,figure {
+    list-style: none outside none;
+    padding: 0px;
+    margin: 0px;
+}
+div.instroduce-wrapper {
+    border: 1px solid black;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+/*이미지 슬라이드 전체크기와 위치*/
+div.instroduce-wrapper .demo {
+    width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*슬라이드 내부 이미지 크기*/
+.demo img {
+    width: 200px;
+}
+/*이미지 슬라이드와 외부 div의 margin*/
+.demo .item {
+    margin-bottom: 30px;
+}
+/*이미지 슬라이드 내부 사진 가운데정렬*/
+.content-slider li {
+    text-align: center;
+    color: #FFF;
+}
+/*인테리어 설명 디자인*/
+div.store-instroduce .store-explain {
+    margin: 0 auto;
+    width: 600px;
+    padding: 32px 24px;
+    border: 10px solid #f0f0f0;
+    clear: both;
+    text-align: center;
+}

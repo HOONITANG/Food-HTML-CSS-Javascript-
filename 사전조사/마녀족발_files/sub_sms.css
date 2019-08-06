@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*left menu 시작*/
+.left_box{
+	width:188px;
+	height:inherit;
+	float:left;
+}
+
+.text_box{padding-bottom:17px;}
+.left_text_box{
+	width:188px;
+	height:141px;
+	background:url('../images/common/sub_l_bg.jpg') no-repeat;
+}
+		  
+.content_text{width:100%;
+			 line-height:20px;
+			 font-family:'Nanum Gothic', 'nanumgothic';
+			 font-size:12px;
+			 color:#888888;}
+			 
+.subgnb_text0{line-height:18px;
+			  font-family:'Nanum Gothic', 'nanumgothic';
+			  font-size:9px;
+			  color:#ffffff;
+			  padding-left:22px;}
+
+.subgnb_text1{
+	line-height:33px;
+	font-family:'Nanum Gothic', 'nanumgothic';
+	font-size:18px;
+	color:#fff;
+	font-weight:bold;
+	padding-left:22px;
+	padding-top:42px;
+}
+
+			  
+.subgnb_box{margin-top:8px;
+			}
+
+.subgnb_box li{width:170px;
+			   height:30px;
+			   line-height:30px;
+			   text-indent:5px; /*문단들여쓰기 간격*/
+			   font-family:'Nanum Gothic', 'nanumgothic';
+			   font-size:13px;
+			   font-weight:bold;
+			   background:#ffffff;
+			   border-top:1px solid #e5e5e5;
+			   }
+					 
+.subgnb_box li a:visited{color:#bababa;
+						   line-height:px;
+						   }
+.subgnb_box li a:link{color:#565656;}
+.subgnb_box li:hover a{color:#ED1C24; }
+					 
+.subgnb_box li:hover{color:#ED1C24;}
+			  
+.subgnb_text2{line-height:30px;
+			  font-family:'Nanum Gothic', 'nanumgothic';
+			  font-size:11px;
+			  color:#696969;}
+			  
+.subgnb_box{width:100%;}
+
+.end_menu{}
+
+.quick_box{width:185px; margin-top:44px;}
+
+/*left menu 끝*/
+
+/*left menu sms 시작*/
+
+.all_box{width:180px;
+		 min-height:450px;
+		 background-color:#f1f1f1;
+		 border:1px solid #c5c5c5;
+		 padding:5px;}
+		 
+.sms_advice{width:100%;}
+
+.icon_text{width:100%;
+		   border-bottom:1px solid #d3d3d3;}
+		   
+.sms_text{font-family:'Nanum Gothic', 'nanumgothic';
+		  font-size:13px;
+		  font-weight:bold;
+		  color:#5a5a5a;
+		  vertical-align:text-top;}
+		  
+.advice_content{width:100%;
+				border-top:1px solid #fff;
+				margin:0 0 10px 0;
+				padding-top:5px;}
+				
+.advice_area{width:170px;
+			 height:80px;
+			 border:1px solid #d5d5d5;
+			 resize:none;
+			 }
+			 
+.input_box{widht:100%;
+		  padding:3px 0 3px 0;
+		  background-color:#CF3;}
+		  
+.in_text{font-family:'Nanum Gothic', 'nanumgothic';
+		    font-size:13px;
+		    font-weight:bold;
+		    color:#5a5a5a;
+			padding-top:10px;
+			padding-bottom:5px;
+			clear:both;}
+			
+.user_info{width:170px;
+	  height:20px;
+	  border:1px solid #d5d5d5;}
+	  
+.btn{width:100%;
+	 margin:0 0 10px 0;}
+	 
+.qr_code{width:100%;
+		 height:90px;
+	 	 margin:0 0 20px 0;}
+		 
+.qr_box{width:50%;
+		float:left;}
+		
+.customer{width:100%;}
+
+.costomer_num{font-family:'Nanum Gothic', 'nanumgothic';
+			  font-size:30px;
+			  font-weight:bold;
+			  color:#97ca1d;
+			  padding-top:5px;
+			  letter-spacing:-1px;}
+			  
+.gray_text{font-family:'Nanum Gothic', 'nanumgothic';
+		   line-height:17px;
+		   font-size:11px;
+		   color:#a2a2a2;}
+.qr_margin{margin-left:20px;}
+
+
+/*left menu sms 끝*/
+
+
+/*회원폼*/
+.member_title{font-family:'Nanum Gothic', 'nanumgothic';font-size:18px;}
+.my_page{width:730px;font-family:'Nanum Gothic', 'nanumgothic';font-size:12px;}
+
+
+.my_page_table1{width:200px;height:40px;border-bottom:1px solid #dcdfe4;border-right:1px solid #dcdfe4;background-color:#fafafa; text-align:left;}
+.my_page_table2{width:515px;border-bottom:1px solid #dcdfe4;padding-left:10px;}
+.my_page_btn{width:730px; padding-top:20px; padding-bottom:50px;}
+
+.login_bg{width:700px; font-family:'Nanum Gothic', 'nanumgothic'; font-size:12px;}

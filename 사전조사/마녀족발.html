@@ -1,0 +1,717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://witchjb.com/sub.asp?dept_code=1005001&bbs_form=5&bbs_id=menu_info -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>마녀족발</title>
+<!-- Single CSS files -->
+<link rel="stylesheet" type="text/css" href="./마녀족발_files/default.css">
+<link rel="stylesheet" type="text/css" href="./마녀족발_files/include.css">
+<link rel="stylesheet" type="text/css" href="./마녀족발_files/sub_sms.css">
+<link rel="stylesheet" type="text/css" href="./마녀족발_files/sub.css">
+<style type="text/css">
+.title_text{line-height:40px; text-indent:11px; font-family: 'Nanum Gothic', 'nanumgothic'; font-size:24px; color:#4d4d4d; font-weight:bold; float:left; width:555px;}
+.title_text1{line-height:40px; font-family: 'Nanum Gothic', 'nanumgothic'; font-size:12px; color:#a7a7a7; float:left;}
+
+.img_btn{display:block; float:left; margin-top:15px;}
+.img_btn1{display:block; float:left; }
+
+</style>
+<!-- JQUERY JS -->
+<script src="./마녀족발_files/jquery-1.10.2.min.js.다운로드"></script><style type="text/css">:root #header + #content > #left > #rlblock_left,
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{display:none !important;}</style>
+<script src="./마녀족발_files/java.js.다운로드"></script>
+<script src="./마녀족발_files/jquery.motionj.rolling.js.다운로드"></script>
+<script>
+$(document).ready(function(){
+	$("#counsel_send").click(function(){
+		$.ajax({
+			type : 'POST',
+			url : '/ajax/counsel_ajax.asp',
+			cache : false,
+			data : $("#counsel_form").serialize(),
+			datatype:"json",
+			success : function(result) {
+				var obj = $.parseJSON(result);
+				if (obj.result == "fail")
+				{
+					if (obj.state == "advice_content")
+					{
+						alert("내용을 입력하세요.");
+					}
+					if (obj.state == "user_info")
+					{
+						alert("이름을 입력하세요.");
+					}
+					if (obj.state == "user_phone")
+					{
+						alert("전화번호를 입력하세요.");
+					}
+				}else if(obj.result == "success"){
+					alert("간편상담 요청이 완료되었습니다.")
+					$("#counsel_form").each(function(){
+						this.reset();
+					});
+				}
+			}
+		});
+	});
+
+	$("#counsel_reset").click(function(){
+		$("#counsel_form").each(function(){
+			this.reset();
+		});
+	});
+    $('#rolling_box').motionj_rolling_vertical({
+        width : 800, // 배너의 너비
+        height : 24, // 배너의 높이
+        max_view : 1, // 초기에 보일 배너의 갯수
+        speed : 3000 // 속도
+    });
+});
+</script>
+</head>
+
+<body style="">
+<!--전체 시작-->
+<div id="wrap">
+	 <!--top시작-->
+    <div class="top_wrap">
+      
+<script type="text/javascript" src="./마녀족발_files/jquery-ui.js.다운로드"></script>
+<script type="text/javascript" src="./마녀족발_files/jMenu.jquery.js.다운로드"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#jMenu").jMenu({
+			openClick : false,
+			ulWidth : '140px',
+			effects : {
+				effectSpeedOpen : 200,
+				effectSpeedClose : 200,
+				effectTypeOpen : 'slide',
+				effectTypeClose : 'slide',
+				effectOpen : 'linear',
+				effectClose : 'linear'
+			},
+			TimeBeforeOpening : 100,
+			TimeBeforeClosing : 100,
+			animatedText : false,
+			paddingLeft: 1		});
+	})
+
+	
+function addbookmark() {
+	var url = "http://hanyang.co.kr";   // URL
+	var title = "한양 류마디 병원";           // 사이트 이름
+	var browser=navigator.userAgent.toLowerCase();
+	// Mozilla, Firefox, Netscape
+	if (window.sidebar) {
+		window.sidebar.addPanel(title, url,"");
+	}
+	// IE or chrome
+	else if( window.external) {
+	// IE
+		if (browser.indexOf('chrome')==-1){
+			window.external.AddFavorite( url, title);
+		} else {
+		// chrome
+			alert('CTRL+D 또는 Command+D를 눌러 즐겨찾기에 추가해주세요.');
+		}
+	}
+	// Opera - automatically adds to sidebar if rel=sidebar in the tag
+	else if(window.opera && window.print) {
+		return true;
+	}
+	// Konqueror
+	else if (browser.indexOf('konqueror')!=-1) {
+		alert('CTRL+B를 눌러 즐겨찾기에 추가해주세요.');
+	}
+	// safari
+	else if (browser.indexOf('webkit')!=-1){
+		alert('CTRL+B 또는 Command+B를 눌러 즐겨찾기에 추가해주세요.');
+	} else {
+		alert('사용하고 계시는 브라우저에서는 이 버튼으로 즐겨찾기를 추가할 수 없습니다. 수동으로 링크를 추가해주세요.')
+	}
+}
+
+</script>
+<!--홈 로그인 시작-->
+	<!--
+	<div id="gnb">
+		<div class="gnb_menu">
+			<ul>
+			
+				<li class="gnb_btn"><a href="/member/index.asp?mode=login"><img src="/images/common/btn_login.png" alt="로그인" /></a></li>
+				<li class="gnb_btn"><a href="/member/index.asp?mode=mypage"><img src="/images/common/btn_joinus.png" alt="회원가입" /></a></li>
+			
+			
+ 				<li><a href="/" >HOME</a></li>
+				<li class="top_bar">|</li>
+			
+				<li><a href="/member/index.asp?mode=login">로그인</a></li>
+				<li class="top_bar">|</li>
+				<li><a href="/member/index.asp?mode=mypage">회원가입</a></li>
+				<li class="top_bar">|</li>
+			
+				<li><a href="javascript:addbookmark('' , '');">즐겨찾기</a></li>
+				<li class="top_bar">|</li>
+				<li><a href="http://blog.naver.com/lovelypikey" target="_blank">★블로그★</a></li>
+			</ul>
+		</div>
+	</div>
+		-->
+      <!--홈 로그인 끝-->
+
+<div id="ad">
+       <div class="topbar_wrap">
+		<div class="topbar">
+		  <a href="http://witchjb.com/index.asp">HOME</a> ㅣ 
+		  <a href="http://witchjb.com/admin/index.asp" target="_blank">관리자모드</a> 
+		</div>
+		</div>
+</div>
+
+
+<div id="sub_menu">
+<div class="inner_area">
+     <!--로고이미지시작-->
+     <div id="logo">
+      <a href="http://witchjb.com/index.asp">
+      		
+      			<img src="./마녀족발_files/witch_logo_10.png" style="max-width:300px" alt="로고">
+      			
+      </a>
+     </div>
+     <!--로고이미지끝-->
+
+     <!--탑메뉴시작-->
+     <div id="navigation" style="width:760px; float:right;">
+       <div style="width:760px; margin-left:73px;">
+						<ul id="jMenu" style="display: table;margin: 0;padding: 0;list-style: none;" class="jMenu">
+			
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?dept_code=1008001&amp;bbs_form=&amp;bbs_id=" class="fNiv">
+					
+				</a>
+				<!--
+				<ul style="top: 73px; left: 0px; width: 105px;margin-top:25px;">
+					
+					</ul>
+					-->
+				</li>
+				
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?dept_code=1007001&amp;bbs_form=&amp;bbs_id=" class="fNiv">
+					
+				</a>
+				<!--
+				<ul style="top: 73px; left: 0px; width: 105px;margin-top:25px;">
+					
+					</ul>
+					-->
+				</li>
+				
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?dept_code=1001001&amp;bbs_form=5&amp;bbs_id=witchjb_intro" class="fNiv">
+					브랜드소개
+				</a>
+				<!--
+				<ul style="top: 73px; left: 0px; width: 105px;margin-top:25px;">
+					
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1001001&bbs_form=5&bbs_id=witchjb_intro">
+								<div style="float:left;">
+								브랜드소개
+								</div>
+							</a>
+							
+						</li>
+						
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1001002&bbs_form=5&bbs_id=interior">
+								<div style="float:left;">
+								인테리어 컨셉
+								</div>
+							</a>
+							
+						</li>
+						
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1001003&bbs_form=9&bbs_id=map">
+								<div style="float:left;">
+								오시는길
+								</div>
+							</a>
+							
+						</li>
+						
+					</ul>
+					-->
+				</li>
+				
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?dept_code=1005001&amp;bbs_form=5&amp;bbs_id=menu_info" class="fNiv">
+					메뉴소개
+				</a>
+				<!--
+				<ul style="top: 73px; left: 0px; width: 105px;margin-top:25px;">
+					
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1005001&bbs_form=5&bbs_id=menu_info">
+								<div style="float:left;">
+								메뉴소개
+								</div>
+							</a>
+							
+						</li>
+						
+					</ul>
+					-->
+				</li>
+				
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?dept_code=1003001&amp;bbs_form=5&amp;bbs_id=information" class="fNiv">
+					창업안내
+				</a>
+				<!--
+				<ul style="top: 73px; left: 0px; width: 105px;margin-top:25px;">
+					
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1003001&bbs_form=5&bbs_id=information">
+								<div style="float:left;">
+								창업안내
+								</div>
+							</a>
+							
+						</li>
+						
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1003002&bbs_form=5&bbs_id=join_info">
+								<div style="float:left;">
+								개설절차
+								</div>
+							</a>
+							
+						</li>
+						
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1003003&bbs_form=5&bbs_id=join_charge">
+								<div style="float:left;">
+								창업개설비용
+								</div>
+							</a>
+							
+						</li>
+						
+					</ul>
+					-->
+				</li>
+				
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?mode=write&amp;bbs_id=advice&amp;bbs_form=1&amp;dept_code=1006001" class="fNiv">
+					창업상담
+				</a>
+			</li>
+			
+			
+			<li class="col_1 jmenu-level-0">
+				<a href="http://witchjb.com/sub.asp?dept_code=1004001&amp;bbs_form=1&amp;bbs_id=news" class="fNiv">
+					커뮤니티
+				</a>
+				<!--
+				<ul style="top: 73px; left: 0px; width: 105px;margin-top:25px;">
+					
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1004001&bbs_form=1&bbs_id=news">
+								<div style="float:left;">
+								마녀족발 뉴스
+								</div>
+							</a>
+							
+						</li>
+						
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1004002&bbs_form=1&bbs_id=notice">
+								<div style="float:left;">
+								공지사항
+								</div>
+							</a>
+							
+						</li>
+						
+						<li style="line-height:20px;float:left;">
+							<a class="isParent" href="/sub.asp?dept_code=1004004&bbs_form=1&bbs_id=review">
+								<div style="float:left;">
+								고객후기
+								</div>
+							</a>
+							
+						</li>
+						
+					</ul>
+					-->
+				</li>
+				
+<!--        <li class="lnb_border"><a href="#">Introduction</a></li>
+        <li class="lnb_end"><a href="#">Board</a></li>-->
+       </ul>
+	   </div>
+     </div>
+    <!--탑메뉴끝-->
+    </div>
+   </div>  
+   </div>
+   <!--top끝-->
+<div class="subimg_box">
+	<div class="sub_img">
+		
+		<div class="top_img">
+			
+				<img style="display:none;" src="./마녀족발_files/banner2.png" width="100%" height="174" alt="상단이미지">
+				<div style="background:url(/upload/category/banner2.png) center; width:100%; min-width:1000px; height:174px;"></div>
+			</div>
+				<div class="img_text">			
+			
+        </div>
+    </div>
+
+</div>
+<!--서브 상단 이미지 끝-->
+
+<!--메뉴 및 컨텐츠 시작-->
+<div class="mc_box">
+	<div class="mc_warp">
+	
+    	<!--좌측메뉴 시작-->
+        <div class="left_box">
+         
+<style>
+    .menu a{cursor:pointer;}
+    .menu .hide{display:none;}
+</style>
+
+<p>
+<script>
+// html dom 이 다 로딩된 후 실행된다.
+$(document).ready(function(){
+// menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+	$(".menu>a").click(function(){
+		var submenu = $(this).next("ul");
+ 
+		// submenu 가 화면상에 보일때는 위로 보드랍게 접고 아니면 아래로 보드랍게 펼치기
+		if( submenu.is(":visible") ){
+			submenu.slideUp();
+		}else{
+			submenu.slideDown();
+		}
+	});
+
+	$('#menu_info').attr("style","background:#fff;");
+	$('#menu_info_font').attr("style","color:#0072bc;");
+
+	if('menu_info' == "")
+	{
+		//$(".year_tab").attr("style","background:#fff");
+	}
+	else
+	{
+		$('#sub_1005001').attr("class","aaa");
+		$('#hide_1005001').attr("class","left_sub_li");
+	}
+});
+	</script>
+</p>
+<div class="left_text_box">
+			
+			<p class="subgnb_text1">메뉴소개</p>
+			<p class="subgnb_text0">MENU</p>
+			<p class="subgnb_text2"></p>
+            </div>
+
+<div class="sub_cate">
+    <ul>       
+			
+					<li class="aaa" id="sub_1005001">
+					<a href="http://witchjb.com/sub.asp?dept_code=1005001&amp;bbs_form=5&amp;bbs_id=menu_info">
+					&nbsp;&nbsp;&nbsp;메뉴소개
+					</a>
+					</li>
+					
+    </ul>
+		<!--
+<div class="left_banner1">
+	<p>051.752.1990</p>
+</div>
+
+<div class="left_banner2">
+	<p><img src="/images/common/left_bn_tle.gif" alt=""></p>
+	<p><a href="/sub.asp?dept_code=1002&bbs_form=5&bbs_id=sub2_1_1"><img src="/images/common/left_bn1_off.gif" alt="" onmouseover="imgOver(this)" onmouseout="imgOut(this)"></a></p>
+	<p><a href="/sub.asp?dept_code=1004002&bbs_form=5&bbs_id=sub4_2"><img src="/images/common/left_bn2_off.gif" alt="" onmouseover="imgOver(this)" onmouseout="imgOut(this)"></a></p>
+	<p><a href="/sub.asp?dept_code=1001002&bbs_form=5&bbs_id=sub1_2"><img src="/images/common/left_bn3_off.gif" alt="" onmouseover="imgOver(this)" onmouseout="imgOut(this)"></a></p>
+	<p><a href="/sub.asp?dept_code=1001005&bbs_form=5&bbs_id=sub1_5"><img src="/images/common/left_bn4_off.gif" alt="" onmouseover="imgOver(this)" onmouseout="imgOut(this)"></a></p>
+</div>
+-->
+	<div></div>
+	<div></div>
+</div>
+        </div>
+        <!--좌측 메뉴 끝-->
+	
+        <!--컨텐츠 영역 시작-->
+        <div class="content_box">
+        	<div class="path">		
+			
+            	<div class="title_text">메뉴소개</div>
+						
+				<div class="title_text1" style="float:right;">
+				  <span class="img_btn"><img src="./마녀족발_files/home_btn.png" width="12" height="11" alt="홈아이콘" style="padding-right:2px;"></span>
+				  <span class="img_btn1">&gt; 메뉴소개 &gt; 메뉴소개</span>
+				</div>
+		</div>
+         	<!--<div class="sub_name"></div>-->
+			
+          	<div class="text_box">
+			
+			<link rel="stylesheet" type="text/css" media="screen" href="./마녀족발_files/bbs_sub.css">
+			<div id="intro_about" style="width:791px">
+			
+<script type="text/javascript">
+$(function(){
+	$(".menu").hover(function(){
+		$("#smenuWrap").slideDown(300);
+	});
+	$("#topWrap").mouseleave(function(){
+		$("#smenuWrap").slideUp(300);
+	});
+});
+</script>
+<style>
+#part2,#part3,#part4,#part5,#part6,#part7,#part8{
+	display:none;
+}
+/* 서브 탭메뉴 기본 */
+.sub_tab_line_bg{clear:both;width:720px;height:31px;border-bottom:1px solid #b1b1b1;}
+.sub_tab_menu{height:32px;}
+.sub_tab_menu li{float:left;width:119px;height:32px;margin-right:3px;}
+.sub_tab_menu li.tab_on{background:url(/images/sub/sub_tab_on.gif) no-repeat;}
+.sub_tab_menu li.tab_off{background:url(/images/sub/sub_tab_off.gif) no-repeat;}
+.sub_tab_menu li a{float:left;width:119px;padding-top:10px;text-align:center;}
+.sub_tab_menu li a.a_on{font-weight:bold;letter-spacing:-1px;}
+.sub_tab_menu li a.a_off{font-weight:none;}
+
+/* 서브 탭메뉴 8개*/
+.sub_tab8_line_bg{clear:both;width:100%;height:31px;border-bottom:1px solid #b1b1b1;}
+.sub_tab8_menu{height:32px;}
+.sub_tab8_menu li{float:left;width:87px;height:32px;margin-right:3px;}
+.sub_tab8_menu li.tab_on{background:url(/images/sub/sub_tab8_on.gif) no-repeat;}
+.sub_tab8_menu li.tab_off{background:url(/images/sub/sub_tab8_off.gif) no-repeat;}
+.sub_tab8_menu li a{float:left;width:87px;padding-top:10px;text-align:center;}
+.sub_tab8_menu li a.a_on{font-weight:bold; font-size:12px; color:#000}
+.sub_tab8_menu li a.a_off{font-weight:none; font-size:12px; color:#666;}
+
+/* 서브 탭메뉴 7*/
+.sub_tab7_line_bg{clear:both;width:100%;height:31px;border-bottom:1px solid #b1b1b1;}
+.sub_tab7_menu{height:32px;}
+.sub_tab7_menu li{float:left;width:107px;height:32px;margin-right:3px;}
+.sub_tab7_menu li.tab_on{background:url(/images/sub/sub_tab7_on.gif) no-repeat;}
+.sub_tab7_menu li.tab_off{background:url(/images/sub/sub_tab7_off.gif) no-repeat;}
+.sub_tab7_menu li a{float:left;width:107px;padding-top:10px;text-align:center;}
+.sub_tab7_menu li a.a_on{font-weight:bold;}
+.sub_tab7_menu li a.a_off{font-weight:none;}
+
+/* 서브 탭메뉴 기본 */
+.sub_tab_line_bg{clear:both;width:720px;height:31px;border-bottom:1px solid #b1b1b1;}
+.sub_tab_menu{height:32px;}
+.sub_tab_menu li{float:left;width:119px;height:32px;margin-right:3px;}
+.sub_tab_menu li.tab_on{background:url(/images/sub/sub_tab_on.gif) no-repeat;}
+.sub_tab_menu li.tab_off{background:url(/images/sub/sub_tab_off.gif) no-repeat;}
+.sub_tab_menu li a{float:left;width:119px;padding-top:10px;text-align:center;font-size:12px;}
+.sub_tab_menu li a.a_on{font-weight:bold;letter-spacing:-1px;color:#000}
+.sub_tab_menu li a.a_off{font-weight:none;color:#666;}
+
+/* 서브 탭메뉴 8개*/
+.sub_tab8_line_bg{clear:both;width:100%;height:31px;border-bottom:1px solid #b1b1b1;}
+.sub_tab8_menu{height:32px;}
+.sub_tab8_menu li{float:left;width:87px;height:32px;margin-right:3px;}
+.sub_tab8_menu li.tab_on{background:url(/images/sub/sub_tab8_on.gif) no-repeat;}
+.sub_tab8_menu li.tab_off{background:url(/images/sub/sub_tab8_off.gif) no-repeat;}
+.sub_tab8_menu li a{float:left;width:87px;padding-top:10px;text-align:center;}
+.sub_tab8_menu li a.a_on{font-weight:bold;}
+.sub_tab8_menu li a.a_off{font-weight:none;}
+
+/* 서브 탭메뉴 7*/
+.sub_tab7_line_bg{clear:both;width:100%;height:31px;border-bottom:1px solid #b1b1b1;}
+.sub_tab7_menu{height:32px;}
+.sub_tab7_menu li{float:left;width:107px;height:32px;margin-right:3px;}
+.sub_tab7_menu li.tab_on{background:url(/images/sub/sub_tab7_on.gif) no-repeat;}
+.sub_tab7_menu li.tab_off{background:url(/images/sub/sub_tab7_off.gif) no-repeat;}
+.sub_tab7_menu li a{float:left;width:107px;padding-top:10px;text-align:center;}
+.sub_tab7_menu li a.a_on{font-weight:bold;}
+.sub_tab7_menu li a.a_off{font-weight:none;}
+.sub_con2{margin-top:30px;}
+</style>
+<script>
+function $sub_tab_menu( id ) {
+	return document.getElementById( id );
+}
+function sel_link(n){
+	for(i=1; i<9; i++) {
+		if(i == n) {
+			$sub_tab_menu("klink" + i).className = "tab_on";
+			$sub_tab_menu("alink" + i).className = "a_on";
+			$sub_tab_menu("part" + i).style.display = "block";
+		} else {
+			$sub_tab_menu("klink" + i).className = "tab_off";
+			$sub_tab_menu("alink" + i).className = "a_off";
+			$sub_tab_menu("part" + i).style.display = "none";
+		}
+	 }
+}
+</script>
+ <script>
+// html dom 이 다 로딩된 후 실행된다.
+$(document).ready(function(){
+
+
+
+	if('1005001' == "")
+	{
+		
+		$('.sub_1005001').attr("class","bbb");
+		
+	}
+	else
+	{
+				
+		$('#sub_menu_info').attr("class","tab_menu1");
+		
+	}
+});
+	</script>
+
+ 
+	   <div class="contert_font">
+	     
+	   </div>
+	   
+	   <!--이미지 나오는 부분 시작-->
+		<div>
+		<ul class="tab_menu_wrap">
+			
+				
+		</ul>
+	  
+	   </div>
+       <!--이미지 나오는 부분 끝-->
+
+	   <div class="bbs_font">
+	
+
+			<!--업로드 된 내용 나오는 부분 시작-->
+		<br><div style="display:none">free adult xxx stories <a href="http://prashanthiblog.com/prashanthinewblog/abortionpills/page/hotel-sex-story.aspx">prashanthiblog.com</a> adult jokes dirty jokes blonde jokes pick up lines humor stories funny</div><div style="display:none">married affairs <a href="http://mdfoosball.com/page/find-an-affair.aspx">link</a> reasons women cheat</div><div style="display:none">quetiapin 700mg <a href="http://nyfodttitler.site/quetiapin-nyf?%C2%B8dt.html">quetiapin hexal 150</a> quetiapin og alkohol</div><div style="display:none">paroxetin ekg <a href="http://ppillerterapi.site/paroxetin-p-piller">paroxetin fachinformation</a> paroxetin 2care4</div>
+		<!--업로드 된 내용 나오는 부분 시작-->
+		 
+			<img src="./마녀족발_files/menu.png">
+	   
+      </div>
+		
+			</div>
+			
+            </div>
+           
+      </div>
+        <!--컨텐츠 영역 끝-->
+        
+    </div>
+</div>
+<!--메뉴 및 컨텐츠 끝-->
+  <!--하단시작-->
+ <div id="bottom_warp" style="clear:both;">
+<!--광고시작-->
+      <!--<div id="ad">
+		<div style="width:1080px; margin:0 auto;">
+		
+		  <a href="/member/index.asp?mode=login">로그인</a> ㅣ 
+		
+		  <a href="/admin/index.asp" target="_blank">관리자모드</a> 
+		</div>
+
+
+<div class="inner"id="rolling_box">
+				   <!-- <ul>
+				   						
+				   					   <li>
+				   						 <span><img src="/images/icon/icon7.png" alt="광고아이콘" /></span>
+				   						  <span class="ad_text"><strong>광고&nbsp; |&nbsp; </strong></span>
+				   						  <span class="ad_text"><a href="http://홈페이지" target="_blank" style="color:#fff">48296</a>
+				   						 </span>
+				   						 </li>
+				   						
+				   					   <li>
+				   						 <span><img src="/images/icon/icon7.png" alt="광고아이콘" /></span>
+				   						  <span class="ad_text"><strong>광고&nbsp; |&nbsp; </strong></span>
+				   						  <span class="ad_text"><a href="http://홈페이지이이이11" target="_blank" style="color:#fff">10209</a>
+				   						 </span>
+				   						 </li>
+				   						
+				   					   <li>
+				   						 <span><img src="/images/icon/icon7.png" alt="광고아이콘" /></span>
+				   						  <span class="ad_text"><strong>광고&nbsp; |&nbsp; </strong></span>
+				   						  <span class="ad_text"><a href="http://http://blog.naver.com/hiworldmart" target="_blank" style="color:#fff">안전하고 건강한 쇼핑몰! 월드마트 몰!</a>
+				   						 </span>
+				   						 </li>
+				   						
+				   					   <li>
+				   						 <span><img src="/images/icon/icon7.png" alt="광고아이콘" /></span>
+				   						  <span class="ad_text"><strong>광고&nbsp; |&nbsp; </strong></span>
+				   						  <span class="ad_text"><a href="http://www.facebook.com/1secrethomme1" target="_blank" style="color:#fff">카카오톡 문의 필수 : secrethomme</a>
+				   						 </span>
+				   						 </li>
+				   						
+				   					   <li>
+				   						 <span><img src="/images/icon/icon7.png" alt="광고아이콘" /></span>
+				   						  <span class="ad_text"><strong>광고&nbsp; |&nbsp; </strong></span>
+				   						  <span class="ad_text"><a href="http://xn--of0bm77a0udejt0gzrd.com" target="_blank" style="color:#fff">예언궁옥보살</a>
+				   						 </span>
+				   						 </li>
+				   						
+				   					   <li>
+				   						 <span><img src="/images/icon/icon7.png" alt="광고아이콘" /></span>
+				   						  <span class="ad_text"><strong>광고&nbsp; |&nbsp; </strong></span>
+				   						  <span class="ad_text"><a href="http://cnp.softapp.co.kr" target="_blank" style="color:#fff">프린터 수리 및 유지보수 전문</a>
+				   						 </span>
+				   						 </li>
+				   						
+				   					</ul> -->
+		   </div>
+	   </div>
+       <!--광고끝-->
+
+       <!--관리자링크시작-->
+ <div id="footer_info">
+  	<div class="footerinner">
+
+    <div class="foot_logo">
+		
+		<img src="./마녀족발_files/bottom_logo_52.png" style="max-width:300px;max-height:100px;">
+		
+    </div>
+    <div class="copyright">
+    <!--상호 : -->마녀족발 | <!--사업자등록번호 :   |--> 대표자 : 박정욱
+	| 주소 : 본사 : 부산광역시 동래구 온천천로 511 스타빌딩 3층 JHFOOD / 본점(해운대점)  |  Tel : 본사 : 1600-7377 / 본점  <!--| Fax :  -->| E-mail : jhfood1@hanmail.net <br>
+	
+    
+   </div>
+
+  </div>
+  </div>
+  <!--하단끝-->
+
+
+<!--전체 끝-->
+
+
+</body></html>

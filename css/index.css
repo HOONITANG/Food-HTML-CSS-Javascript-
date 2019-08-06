@@ -1,0 +1,228 @@
+* {
+   box-sizing: border-box; 
+}
+body,html,ul,li,figure {
+    list-style: none outside none;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+/*상단메뉴 전체 너비부분*/
+.header {
+    position: relative;
+    height: 90px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.33);
+    font-family: 'Nanum Gothic';
+}
+.logo {
+    float: left;   
+}
+/* The navigation menu */
+.navbar {
+    overflow: hidden;
+    margin-left: 15%;
+}
+/* The subnavigation menu */
+.subnav {
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: 22px;
+/*    border: none;*/
+    outline: none;
+    line-height: 90px;
+    color: black;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.subnav {
+    padding: 0 40px;
+}
+
+/* Add a gold color to navigation links on hover,focus */
+.navbar a:hover,
+.navbar a:focus
+{
+    color: gold;
+}
+.subnav:hover .subnavbtn,
+.subnav:focus .subnavbtn
+{
+    border-bottom: 2px solid gold;
+}
+div.subnavwrapper ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+/*ul li스타일 (border속성여기서)*/
+div.subnavwrapper ul li {
+    float: left;
+    text-align: center;
+}
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    width: 100%;
+    height: 40px;
+    display: none;
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    font-size: 20px;
+    clear: both;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+}
+/* Add a gold background color on focus */
+.subnav-content a:focus {
+    border-bottom: 2px solid gold;
+}
+.subnav-content a:hover {
+    border-bottom: 2px solid gold;
+}
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: block;
+}
+/*sns외부위치 조정*/
+div.snslist {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0,-50%);
+    text-align: center; 
+}
+/*sns아이콘 기본설정*/
+div.snslist a .fab {
+    font-size: 25px;
+    color: #fff;
+    transition: 0.3s;
+}
+/*sns아이콘 회전 애니메이션*/
+div.snslist a:hover .fab {
+    transform: rotateY(360deg);
+}
+/*sns내부 위치조정*/
+div.snslist a {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+/*sns아이콘 배경디자인, 원래는 점차 차오르는것을 할려고했으나 디자인이 어울리지않음..*/
+div.snslist a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    z-index:-1;
+}
+/*
+div.snslist a:hover:before {
+    height:30px;
+}
+*/
+/*sns아이콘 마다 배경색 지정*/
+div.snslist a:nth-of-type(1):before {
+    background-color: #3b5999;
+}
+div.snslist a:nth-of-type(2):before {
+    background-color: #e4405f;
+}
+div.snslist a:nth-of-type(3):before {
+    background-color: #00c300;
+}
+div.snslist a:nth-of-type(4):before {
+    background-color: #55acee;
+}
+
+/*로그인 회원가입 위치조정*/
+.loginlist {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 10px 0px;
+}
+/* login links */
+div.loginlist a {
+    font-size: 16px;
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+/*동영상*/
+div.ivideo {
+    width: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+div.ivideo > video { 
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; 
+    filter: alpha(opacity=70);
+/*IE 8버젼 이하 filter사용*/
+}
+
+div.ivideo .videotext {
+    font-family: 'Yeon Sung', cursive;
+    position: absolute;
+    right: 5%;
+    bottom: 15%; 
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+div.footer {
+    height: 300px;
+    background-color: #666;
+    color: #999;
+    padding: 20px;
+    margin-top: 50px;
+    font-family: 'Nanum Gothic';
+    font-size: 16px;
+}
+div.footer .fisrtfooter ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+div.footer .fisrtfooter ul li {
+    display: inline-block;
+    margin: 10px;
+    margin-left: 0px;
+}

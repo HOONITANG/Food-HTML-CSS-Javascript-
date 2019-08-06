@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .subnav-content {
+            width: 100%;
+            display: none;
+            border: 1px solid black;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .subnav-content a {
+            border: 1px solid black;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="linkscover">
+        a
+        <div class="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <div class="subnav">
+        <button class="subnavbtn">브랜드 <i class="fa fa-caret-down"></i></button>
+        <div class="subnavcover">
+            <div class="subnav-content">
+                <a href="#">인사말</a>
+                <a href="#">매장소개</a>
+                <a href="#">찾아오시는 길</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

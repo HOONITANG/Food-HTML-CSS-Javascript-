@@ -1,0 +1,55 @@
+div.snslist {
+    background-color: lightgray;
+    width: 360px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+div.snslist a .fab {
+    font-size:26px;
+    color: #000;
+    transition: 0.3s;
+}
+div.snslist a:hover .fab {
+    transform: rotateY(360deg);
+    color: #fff;
+}
+div.snslist a {
+    position: relative;
+    display: inline-block;
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    text-align: center;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+div.snslist a:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 50px;
+    height: 0px;
+    transition: 0.5s;
+}
+div.snslist a:hover:before {
+    height: 50px;
+}
+div.snslist a:nth-of-type(1):before {
+    background-color: #3b5999;
+}
+div.snslist a:nth-of-type(2):before {
+    background-color: #e4405f;
+}
+div.snslist a:nth-of-type(3):before {
+    background-color: #00c300;
+}
+div.snslist a:nth-of-type(4):before {
+    background-color: #55acee;
+}
+
+    

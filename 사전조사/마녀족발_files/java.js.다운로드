@@ -1,0 +1,108 @@
+//아이프레임
+function reSize(){
+	var objBody = ifrm.document.body;
+	var objFrame = document.all["ifrm"];
+
+	objFrame.style.height = objBody.scrollHeight + (objBody.offsetHeight - objBody.clientHeight);
+	objFrame.style.width = '100%';
+}
+
+function num_only(){
+  if((event.keyCode<48) || (event.keyCode>57)) {
+    event.returnValue=false;
+  }
+}
+
+// 이미지 오버 공통 함수
+function imgOver(oImg){
+	var reg = new RegExp('_off');
+	oImg.src = oImg.src.replace(reg,'_on');
+}
+// 이미지 아웃 공통 함수
+function imgOut(oImg){
+	var reg = new RegExp('_on');
+	oImg.src = oImg.src.replace(reg,'_off');
+} 
+
+// 삭제 검사 확인
+function del(href){
+	if(confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?")) {
+		document.location.href = encodeURI(href);
+	}
+}
+
+function login_check(f){
+	if(f.idno.value==""){
+		alert("아이디를 입력하세요");
+		f.idno.focus();
+		return false;
+	}
+	if(f.passwd.value==""){
+		alert("비밀번호를 입력하세요");
+		f.passwd.focus();
+		return false;
+	}
+	return true;
+}
+
+function member_find(){
+	window.open('/member/find.php', 'popup', 'width=450, height=300, status=no, toolbar=no, menubar=no, directories=no, location=no');
+}
+
+function search_check(){
+	var frm = document.kslee_form;
+	if(frm.keyword.value==""){
+		alert("검색어를 입력하세요");
+		frm.keyword.focus();
+		return false;
+	}
+	return true;
+}
+
+function comment_write_check(){
+	var frm = document.comment_form;
+	if( frm.name.value == "") {
+		alert("이름을 입력 하세요.");
+		frm.name.focus();
+		return false;
+	}
+  if( frm.passwd.value == "" ){
+    alert("비밀번호를 입력 하세요.");
+    frm.passwd.focus();
+    return false;
+  }
+	if( frm.comment.value == "") {
+		alert("내용을 입력 하세요.");
+		frm.comment.focus();
+		return false;
+	}
+	return true;
+}
+
+function pass_chk(){
+	frm = document.pass_form;
+	if ( frm.passwd.value == "" ) {
+		alert("비밀번호를 입력 하세요.");
+	  frm.passwd.focus();
+		return false;
+	}
+  return true;
+}
+
+//게시판 카테고리
+function category_link(val){
+	location.href='?category='+val;
+}
+
+function mainBoard(a){
+	for(var i=1; i<3; i++){
+		var tleImgOut = document.getElementById("mbList"+i).getElementsByTagName("img")[0];
+		imgOut(tleImgOut);
+		document.getElementById("list"+i).style.display = "none";
+		document.getElementById("more"+i).style.display = "none";
+	}
+	var tleImg = document.getElementById("mbList"+a).getElementsByTagName("img")[0];
+	imgOver(tleImg);
+	document.getElementById("list"+a).style.display = "block";
+	document.getElementById("more"+a).style.display = "block";
+}

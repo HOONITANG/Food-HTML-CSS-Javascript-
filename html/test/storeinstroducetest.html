@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테스트해야지</title>
+    <link rel="stylesheet" href="../../css/test/storetest.css">
+    <link rel="stylesheet" href="../../css/test/lightslider.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="store-instroduce">
+        <div class="septext">
+            <p>인테리어 소개</p>
+            <hr>
+        </div>
+        <div class="instroduce-wrapper">
+            <div class="demo">
+                <div class="item">
+                    <ul id="content-slider" class="content-slider">
+                        <li>
+                            <img src="http://placehold.it/200x200">
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/200x200">
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/200x200">
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/200x200">
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/200x200">
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/200x200">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="store-explain">
+                    <h3>어저구 저쩌구한 인테리어로 어쩌구 저쩌구</h3>
+                    <p>뭐뭐한 뭐머머뭐 무머머머</p>
+                    <p>뭐뭐한 뭐머머뭐 무머머머마마미므 입니다.</p>
+                </div>
+            </div>
+            <!--store-explain-->
+        </div>
+        <!--instroduce-wrapper-->
+    </div>
+    <!--store-instroduce-->
+    <!--이미지 슬라이드-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/test/lightslider.js"></script>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+        $("#content-slider").lightSlider({
+            loop: true,
+            keyPress: true
+        });
+    });
+</script>
